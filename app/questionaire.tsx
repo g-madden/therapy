@@ -8,94 +8,80 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const genderOptions = [
-  "Male",
-  "Female",
-  "Transgender Male",
-  "Transgender Non-Binary",
-  "Non-Binary",
-  "Gender Queer",
-  "Two-Spirit",
-];
-
-const therapistOptions = [
-  "Same gender as me",
-  "Different gender",
-  "Doesn't matter",
+const questions = [
+  {
+    key: "gender",
+    question: "What gender do you identify as?",
+    options: [
+      "Male",
+      "Female",
+      "Transgender Male",
+      "Transgender Non-Binary",
+      "Non-Binary",
+      "Gender Queer",
+      "Two-Spirit",
+    ],
+  },
+  {
+    key: "therapist",
+    question: "What about your therapist?",
+    options: ["Same gender as me", "Different gender", "Doesn't matter"],
+  },
 ];
 
 const MultiStepForm = () => {
-  const [step, setStep] = useState(1);
-  const [selectedGender, setSelectedGender] = useState<string | null>(null);
-  const [selectedTherapist, setSelectedTherapist] = useState<string | null>(
-    null
-  );
+  const [step, setStep] = useState(0);
+  const [form, setForm] = useState<{ [key: string]: string }>({});
 
   const handleNext = () => {
-    if (step < 2) setStep(step + 1);
+    if (step < questions.length - 1) {
+      setStep(step + 1);
+    } else {
+      // navigate to profile page
+    }
   };
 
   const handleBack = () => {
-    if (step > 1) setStep(step - 1);
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  };
+
+  const handleSelect = (key: string, value: string) => {
+    setForm({ ...form, [key]: value });
   };
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-        <Text>Back</Text>
-      </TouchableOpacity>
-
-      {step === 1 && (
-        <>
-          <Text style={styles.title}>What gender do you identify as?</Text>
-          <FlatList
-            data={genderOptions}
-            keyExtractor={(item) => item}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={[
-                  styles.option,
-                  selectedGender === item && styles.selectedOption,
-                ]}
-                onPress={() => setSelectedGender(item)}
-              >
-                <Text>{item}</Text>
-                {selectedGender === item && (
-                  <TouchableOpacity onPress={() => setSelectedGender(null)}>
-                    <Ionicons name="close-circle" size={20} color="gray" />
-                  </TouchableOpacity>
-                )}
-              </TouchableOpacity>
-            )}
-          />
-        </>
+      {step > 0 && (
+        <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+          <Text>Back</Text>
+        </TouchableOpacity>
       )}
 
-      {step === 2 && (
-        <>
-          <Text style={styles.title}>What about your therapist?</Text>
-          <FlatList
-            data={therapistOptions}
-            keyExtractor={(item) => item}
-            renderItem={({ item }) => (
+      <Text style={styles.title}>{questions[step].question}</Text>
+      <FlatList
+        data={questions[step].options}
+        keyExtractor={(item) => item}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={[
+              styles.option,
+              form[questions[step].key] === item && styles.selectedOption,
+            ]}
+            onPress={() => handleSelect(questions[step].key, item)}
+          >
+            <Text>{item}</Text>
+            {form[questions[step].key] === item && (
               <TouchableOpacity
-                style={[
-                  styles.option,
-                  selectedTherapist === item && styles.selectedOption,
-                ]}
-                onPress={() => setSelectedTherapist(item)}
+                onPress={() => handleSelect(questions[step].key, "")}
               >
-                <Text>{item}</Text>
-                {selectedTherapist === item && (
-                  <TouchableOpacity onPress={() => setSelectedTherapist(null)}>
-                    <Ionicons name="close-circle" size={20} color="gray" />
-                  </TouchableOpacity>
-                )}
+                <Ionicons name="close-circle" size={20} color="gray" />
               </TouchableOpacity>
             )}
-          />
-        </>
-      )}
+          </TouchableOpacity>
+        )}
+      />
 
       <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
         <Ionicons name="arrow-forward" size={24} color="white" />
@@ -106,11 +92,11 @@ const MultiStepForm = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: "column",
     padding: 20,
     backgroundColor: "white",
     height: "100%",
+    paddingTop: 150,
   },
   backButton: {
     padding: 10,
