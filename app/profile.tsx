@@ -9,46 +9,20 @@ import {
   StyleSheet,
   Dimensions,
 } from "react-native";
-
-interface Profile {
-  id: string;
-  name: string;
-  image: any;
-  tags: string[];
-}
-
-const profiles: Profile[] = [
-  {
-    id: "1",
-    name: "April Wilson",
-    image: require("../assets/images/headshot.jpg"),
-    tags: ["Muslim", "Spiritual", "Age match", "Gender match"],
-  },
-  {
-    id: "2",
-    name: "Jane Smith",
-    image: require("../assets/images/profile2.png"),
-    tags: ["Spiritual", "Ethnicity match", "Virtual Sessions", "Age match"],
-  },
-  {
-    id: "3",
-    name: "Alex Johnson",
-    image: require("../assets/images/profile1.png"),
-    tags: ["Spiritual", "Ethnicity match", "Virtual Sessions", "Age match"],
-  },
-];
+import { Practitioner } from "./types";
+import { profiles } from "./data/profiles";
 
 const { height } = Dimensions.get("window");
 
 const Profile = () => {
+  const [data, setData] = useState(profiles);
+
   const addToList = () => {
     console.log("Added to list");
   };
 
-  const [data, setData] = useState(profiles);
-
-  const renderItem = ({ item }: { item: Profile }) => (
-    <View style={styles.container}>
+  const renderItem = ({ item }: { item: Practitioner }) => (
+    <View style={styles.itemContainer}>
       <View style={styles.imageContainer}>
         <Image source={item.image} style={styles.backgroundImage} />
         <View style={styles.transparent}>
@@ -78,47 +52,51 @@ const Profile = () => {
   );
 
   return (
-    <FlatList
-      data={data}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id}
-      pagingEnabled
-      showsVerticalScrollIndicator={false}
-      snapToAlignment="start"
-      decelerationRate="fast"
-    />
+    <View style={styles.mainContainer}>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        pagingEnabled
+        showsVerticalScrollIndicator={false}
+        snapToAlignment="start"
+        decelerationRate="fast"
+        style={styles.list}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
+    flex: 1,
+    backgroundColor: "#383838",
+  },
+  list: {
+    flex: 1,
+  },
+  itemContainer: {
     width: "100%",
-    height: height, // Each item takes full screen height
+    height: height,
     alignItems: "center",
     justifyContent: "flex-start",
-  },
-  backgroundImage: {
-    // position: "absolute",
-    // top: 0,
-    width: "100%",
-    height: "100%",
   },
   imageContainer: {
     width: "100%",
     height: "75%",
-    // position: "absolute",
-    // top: 0,
+  },
+  backgroundImage: {
+    width: "100%",
+    height: "100%",
   },
   transparent: {
     backgroundColor: "transparent",
     width: "100%",
-    // height: "100%",
     position: "absolute",
     bottom: 10,
     paddingHorizontal: 24,
     zIndex: 1,
     marginBottom: 30,
-    // justifyContent: "flex-end",
   },
   byline: {
     color: "rgba(255, 255, 255, 0.8)",
@@ -180,8 +158,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
-    // paddingHorizontal: 24,
-    // paddingVertical: 0,
   },
 });
 

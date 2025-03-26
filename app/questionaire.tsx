@@ -7,39 +7,19 @@ import {
   StyleSheet,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { QuestionnaireAnswers } from "./types";
+import { questions } from "./data/questions";
 
-const questions = [
-  {
-    key: "gender",
-    question: "What gender do you identify as?",
-    options: [
-      "Male",
-      "Female",
-      "Transgender Male",
-      "Transgender Non-Binary",
-      "Non-Binary",
-      "Gender Queer",
-      "Two-Spirit",
-    ],
-  },
-  {
-    key: "therapist",
-    question: "What about your therapist?",
-    options: ["Same gender as me", "Different gender", "Doesn't matter"],
-  },
-];
-
-const MultiStepForm = () => {
+const MultiStepForm = ({ 
+  setSelected 
+}: { 
+  setSelected: (answers: QuestionnaireAnswers) => void 
+}) => {
   const [step, setStep] = useState(0);
-  const [form, setForm] = useState<{ [key: string]: string }>({});
-
-  const handleNext = () => {
-    if (step < questions.length - 1) {
-      setStep(step + 1);
-    } else {
-      // navigate to profile page
-    }
-  };
+  const [form, setForm] = useState<QuestionnaireAnswers>({
+    gender: "",
+    therapist: "",
+  });
 
   const handleBack = () => {
     if (step > 0) {
@@ -47,8 +27,17 @@ const MultiStepForm = () => {
     }
   };
 
-  const handleSelect = (key: string, value: string) => {
+  const handleSelect = (key: keyof QuestionnaireAnswers, value: string) => {
     setForm({ ...form, [key]: value });
+    
+    setTimeout(() => {
+      if (step < questions.length - 1) {
+        setStep(step + 1);
+      } else {
+        // navigate to profile page with answers
+        setSelected(form);
+      }
+    }, 500); // 500ms delay for better UX
   };
 
   return (
@@ -82,10 +71,6 @@ const MultiStepForm = () => {
           </TouchableOpacity>
         )}
       />
-
-      <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-        <Ionicons name="arrow-forward" size={24} color="white" />
-      </TouchableOpacity>
     </View>
   );
 };
@@ -123,15 +108,7 @@ const styles = StyleSheet.create({
   selectedOption: {
     backgroundColor: "#e6f7ff",
     borderColor: "#007AFF",
-  },
-  nextButton: {
-    position: "absolute",
-    bottom: 20,
-    right: 20,
-    backgroundColor: "black",
-    padding: 15,
-    borderRadius: 50,
-  },
+  }
 });
 
 export default MultiStepForm;

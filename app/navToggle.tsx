@@ -14,10 +14,6 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-// Dummy SVG Icons (Replace with actual SVGs if needed)
-const TherapistsIcon = () => <Text style={styles.icon}>👥</Text>;
-// const YouIcon = () => <SmileyIcon />;
-
 const { width } = Dimensions.get("window");
 const TOGGLE_WIDTH = 162; // Adjust size as needed
 const TOGGLE_HEIGHT = 52;

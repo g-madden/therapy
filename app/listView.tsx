@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   Text,
@@ -6,105 +6,95 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
 } from "react-native";
-// import { Menu, Provider } from "react-native-paper";
+import { Ionicons } from "@expo/vector-icons";
+import Settings from "./settings";
+import { Practitioner } from "./types";
+import { profiles } from "./data/profiles";
 
-interface Profile {
-  id: string;
-  name: string;
-  image: any;
-  dateAdded: string;
+interface SavedProfilesListProps {
+  showSettings: boolean;
+  onSettingsPress: () => void;
+  onSettingsClose: () => void;
 }
 
-const savedProfiles: Profile[] = [
-  {
-    id: "1",
-    name: "John Doe",
-    image: require("../assets/images/profile1.png"),
-    dateAdded: "Jan 5, 2025",
-  },
-  {
-    id: "2",
-    name: "Jane Smith",
-    image: require("../assets/images/profile2.png"),
-    dateAdded: "Jan 10, 2025",
-  },
-  {
-    id: "3",
-    name: "Alex Johnson",
-    image: require("../assets/images/headshot.jpg"),
-    dateAdded: "Jan 15, 2025",
-  },
-];
-
-const SavedProfilesList: React.FC = () => {
-  const [visibleMenu, setVisibleMenu] = useState<string | null>(null);
-  const [profiles, setProfiles] = useState<Profile[]>(savedProfiles);
-  /*
-   const openMenu = (id: string) => setVisibleMenu(id);
-  const closeMenu = () => setVisibleMenu(null);
-
-  const deleteProfile = (id: string) => {
-    setProfiles(profiles.filter((profile) => profile.id !== id));
-    closeMenu(); 
-  };*/
-  // console.log(profiles);
-  const renderItem = ({ item }: { item: Profile }) => {
-    // console.log("test");
+const SavedProfilesList: React.FC<SavedProfilesListProps> = ({ 
+  showSettings, 
+  onSettingsPress, 
+  onSettingsClose 
+}) => {
+  const renderItem = ({ item }: { item: Practitioner }) => {
     return (
       <View style={styles.itemContainer}>
         <Image source={item.image} style={styles.profileImage} />
         <View style={styles.textContainer}>
           <Text style={styles.name}>{item.name}</Text>
-          <Text style={styles.date}>{item.dateAdded}</Text>
+          <Text style={styles.date}>Registered Clinical Counsellor</Text>
         </View>
-        {/* <Menu
-          visible={visibleMenu === item.id}
-          onDismiss={closeMenu}
-          anchor={
-            <TouchableOpacity onPress={() => openMenu(item.id)}>
-              <Text style={styles.menuDots}>⋮</Text>
-            </TouchableOpacity>
-          }
-        >
-          <Menu.Item onPress={() => deleteProfile(item.id)} title="Delete" />
-        </Menu> */}
         <Text style={styles.menuDots}>⋮</Text>
       </View>
     );
   };
 
+  if (showSettings) {
+    return <Settings onClose={onSettingsClose} />;
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.header}>Saved Profiles</Text>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity 
+          onPress={onSettingsPress}
+          style={styles.settingsButton}
+        >
+          <Ionicons name="settings-outline" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
+      <Text style={styles.title}>Saved Profiles</Text>
       <FlatList
         data={profiles}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        ListEmptyComponent={
+          <Text style={styles.emptyText}>No saved profiles yet</Text>
+        }
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1, // Ensures the container expands to fill the screen
-    backgroundColor: "#fff",
-    // using flex make this 150px from the top
-    marginTop: 150,
+    flex: 1,
+    backgroundColor: "white",
+    padding: 20,
+    paddingTop: 75,
   },
   header: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginBottom: 20,
+  },
+  settingsButton: {
+    padding: 8,
+  },
+  title: {
     fontSize: 24,
-    padding: 15,
     fontWeight: "bold",
+    color: "black",
+    marginBottom: 20,
+  },
+  emptyText: {
+    color: "rgba(0, 0, 0, 0.5)",
+    textAlign: "center",
+    marginTop: 20,
   },
   itemContainer: {
     flexDirection: "row",
     alignItems: "center",
     padding: 15,
     borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    borderBottomColor: "#eee",
     backgroundColor: "transparent",
   },
   profileImage: {
@@ -119,6 +109,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "black",
   },
   date: {
     fontSize: 14,
@@ -127,6 +118,7 @@ const styles = StyleSheet.create({
   menuDots: {
     fontSize: 24,
     paddingHorizontal: 10,
+    color: "black",
   },
 });
 
