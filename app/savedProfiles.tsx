@@ -11,6 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import Settings from "./settings";
 import { Practitioner } from "./types";
 import { profiles } from "./data/profiles";
+import { useApp } from "./context/AppContext";
 
 interface SavedProfilesListProps {
   showSettings: boolean;
@@ -23,6 +24,8 @@ const SavedProfilesList: React.FC<SavedProfilesListProps> = ({
   onSettingsPress, 
   onSettingsClose 
 }) => {
+  const { savedProfiles, removeSavedProfile } = useApp();
+
   const renderItem = ({ item }: { item: Practitioner }) => {
     return (
       <View style={styles.itemContainer}>
@@ -31,7 +34,9 @@ const SavedProfilesList: React.FC<SavedProfilesListProps> = ({
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.date}>Registered Clinical Counsellor</Text>
         </View>
-        <Text style={styles.menuDots}>⋮</Text>
+        <TouchableOpacity onPress={() => removeSavedProfile(item.id)}>
+          <Text style={styles.menuDots}>⋮</Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -52,7 +57,7 @@ const SavedProfilesList: React.FC<SavedProfilesListProps> = ({
       </View>
       <Text style={styles.title}>Saved Profiles</Text>
       <FlatList
-        data={profiles}
+        data={savedProfiles}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         ListEmptyComponent={

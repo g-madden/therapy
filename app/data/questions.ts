@@ -1,7 +1,7 @@
 import { QuestionnaireAnswers } from "../types";
 
 export interface Question {
-  key: keyof QuestionnaireAnswers;
+  key: string;
   question: string;
   options: string[];
 }

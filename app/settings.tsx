@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TouchableOpacity,
-  FlatList,
+  ScrollView,
   StyleSheet,
   Alert,
 } from "react-native";
@@ -20,8 +20,11 @@ interface SettingsProps {
 
 export default function Settings({ onClose }: SettingsProps) {
   const [answers, setAnswers] = useState<QuestionnaireAnswers>({
+    age: "",
     gender: "",
-    therapist: "",
+    issues: [],
+    preferences: [],
+    therapistGender: "",
   });
 
   useEffect(() => {
@@ -66,34 +69,33 @@ export default function Settings({ onClose }: SettingsProps) {
         <Text style={styles.title}>Settings</Text>
       </View>
 
-      <Text style={styles.sectionTitle}>Your Preferences</Text>
-      {questions.map((question) => (
-        <View key={question.key} style={styles.questionContainer}>
-          <Text style={styles.questionText}>{question.question}</Text>
-          <FlatList
-            data={question.options}
-            keyExtractor={(item) => item}
-            renderItem={({ item }) => (
+      <ScrollView style={styles.scrollView}>
+        <Text style={styles.sectionTitle}>Your Preferences</Text>
+        {questions.map((question) => (
+          <View key={question.key} style={styles.questionContainer}>
+            <Text style={styles.questionText}>{question.question}</Text>
+            {question.options.map((option) => (
               <TouchableOpacity
+                key={option}
                 style={[
                   styles.option,
-                  answers[question.key] === item && styles.selectedOption,
+                  answers[question.key as keyof QuestionnaireAnswers] === option && styles.selectedOption,
                 ]}
-                onPress={() => handleSelect(question.key, item)}
+                onPress={() => handleSelect(question.key as keyof QuestionnaireAnswers, option)}
               >
-                <Text>{item}</Text>
-                {answers[question.key] === item && (
+                <Text>{option}</Text>
+                {answers[question.key as keyof QuestionnaireAnswers] === option && (
                   <TouchableOpacity
-                    onPress={() => handleSelect(question.key, "")}
+                    onPress={() => handleSelect(question.key as keyof QuestionnaireAnswers, "")}
                   >
                     <Ionicons name="close-circle" size={20} color="gray" />
                   </TouchableOpacity>
                 )}
               </TouchableOpacity>
-            )}
-          />
-        </View>
-      ))}
+            ))}
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -103,6 +105,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     padding: 20,
+  },
+  scrollView: {
+    flex: 1,
   },
   header: {
     flexDirection: "row",

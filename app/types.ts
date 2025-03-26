@@ -13,8 +13,11 @@ export interface Profile {
 }
 
 export interface QuestionnaireAnswers {
+  age: string;
   gender: string;
-  therapist: string;
+  issues: string[];
+  preferences: string[];
+  therapistGender: string;
 }
 
 export interface QuestionnaireData {

@@ -1,54 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { View, StatusBar, StyleSheet } from "react-native";
-import Profile from "./profile";
-import SavedProfilesList from "./listView";
+import Feed from "./feed";
+import SavedProfilesList from "./savedProfiles";
 import NavToggle from "./navToggle";
 import Questionaire from "./questionaire";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { QuestionnaireData, QuestionnaireAnswers } from "./types";
+import { AppProvider, useApp } from "./context/AppContext";
 
-const QUESTIONNAIRE_KEY = "@therapy_questionnaire_data";
-
-export default function Index() {
+function IndexContent() {
   const [selected, setSelected] = useState("questionaire");
-  const [isLoading, setIsLoading] = useState(true);
-  const [questionnaireData, setQuestionnaireData] = useState<QuestionnaireData | null>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const { questionnaireCompleted } = useApp();
 
-  useEffect(() => {
-    checkQuestionnaireStatus();
-  }, []);
-
-  const checkQuestionnaireStatus = async () => {
-    try {
-      const data = await AsyncStorage.getItem(QUESTIONNAIRE_KEY);
-      if (data) {
-        const parsedData: QuestionnaireData = JSON.parse(data);
-        setQuestionnaireData(parsedData);
-        if (parsedData.completed) {
-          setSelected("therapists");
-        }
-      }
-    } catch (error) {
-      console.error("Error checking questionnaire status:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleQuestionnaireComplete = async (answers: QuestionnaireAnswers) => {
-    try {
-      const data: QuestionnaireData = {
-        completed: true,
-        answers,
-      };
-      await AsyncStorage.setItem(QUESTIONNAIRE_KEY, JSON.stringify(data));
-      setQuestionnaireData(data);
+  // If questionnaire is completed, show therapists view
+  React.useEffect(() => {
+    if (questionnaireCompleted) {
       setSelected("therapists");
-    } catch (error) {
-      console.error("Error saving questionnaire data:", error);
     }
-  };
+  }, [questionnaireCompleted]);
 
   const handleSettingsPress = () => {
     setShowSettings(true);
@@ -59,7 +27,7 @@ export default function Index() {
   };
 
   const Component: Record<string, JSX.Element> = {
-    therapists: <Profile />,
+    therapists: <Feed />,
     you: (
       <SavedProfilesList
         showSettings={showSettings}
@@ -67,12 +35,8 @@ export default function Index() {
         onSettingsClose={handleSettingsClose}
       />
     ),
-    questionaire: <Questionaire setSelected={handleQuestionnaireComplete} />,
+    questionaire: <Questionaire setSelected={setSelected} />,
   };
-
-  if (isLoading) {
-    return null; // Or a loading spinner
-  }
 
   return (
     <View style={styles.container}>
@@ -90,6 +54,14 @@ export default function Index() {
         {Component[selected]}
       </View>
     </View>
+  );
+}
+
+export default function Index() {
+  return (
+    <AppProvider>
+      <IndexContent />
+    </AppProvider>
   );
 }
 
