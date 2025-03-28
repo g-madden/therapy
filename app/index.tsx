@@ -134,7 +134,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#383838",
+    // backgroundColor: "#383838",
   },
   savedProfilesContainer: {
     position: 'absolute',

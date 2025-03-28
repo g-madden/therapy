@@ -3,14 +3,9 @@ export interface Practitioner {
   name: string;
   image: any;
   tags: string[];
+  bio: string;
 }
 
-export interface Profile {
-  id: string;
-  name: string;
-  image: any;
-  tags: string[];
-}
 
 export interface QuestionnaireAnswers {
   age: string;

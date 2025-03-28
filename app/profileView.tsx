@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useApp } from "./context/AppContext";
@@ -46,6 +47,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ profile, onBack }) => {
         >
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
+        <ScrollView>
         <View style={styles.itemContainer}>
           <View style={styles.imageContainer}>
             <Image source={profile.image} style={styles.backgroundImage} />
@@ -61,21 +63,21 @@ const ProfileView: React.FC<ProfileViewProps> = ({ profile, onBack }) => {
           </View>
           <View style={styles.overlay}>
             <View style={styles.tagsContainer}>
+            <Text style={styles.bio}>
+              {profile.bio}
+            </Text>
               <Text style={styles.reason}>Matched for you because</Text>
               {profile.tags.map((tag, index) => (
                 <Text key={index} style={styles.tag}>
                   {tag}
                 </Text>
               ))}
+              
             </View>
-            <TouchableOpacity 
-              style={styles.button}
-              onPress={handleRemove}
-            >
-              <Text style={styles.buttonText}>Remove from list</Text>
-            </TouchableOpacity>
+            
           </View>
         </View>
+        </ScrollView>
       </View>
     </PanGestureHandler>
   );
@@ -83,8 +85,8 @@ const ProfileView: React.FC<ProfileViewProps> = ({ profile, onBack }) => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
-    backgroundColor: "#383838",
+    // flex: 1,
+    // backgroundColor: "#383838",
   },
   backButton: {
     position: "absolute",
@@ -95,31 +97,39 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     width: "100%",
-    height: height,
+    // height: height,
     alignItems: "center",
-    justifyContent: "flex-start",
+    // justifyContent: "flex-start",
+    // marginTop: "75%",
   },
   imageContainer: {
     width: "100%",
-    height: "75%",
+   
   },
   backgroundImage: {
     width: "100%",
-    height: "100%",
+    // height: "100%",
+    position: "absolute",
   },
   transparent: {
     backgroundColor: "transparent",
     width: "100%",
-    position: "absolute",
-    bottom: 10,
+    // position: "absolute",
+    // bottom: 10,
     paddingHorizontal: 24,
     zIndex: 1,
     marginBottom: 30,
+     marginTop: "100%",
   },
   byline: {
     color: "rgba(255, 255, 255, 0.8)",
     fontSize: 14,
     marginBottom: 4,
+  },
+  bio: {
+    color: "#bbb",
+    fontSize: 16,
+    marginBottom: 40,
   },
   gradient: {
     position: "absolute",
@@ -133,8 +143,8 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 24,
     paddingHorizontal: 24,
-    position: "absolute",
-    bottom: 0,
+    // position: "absolute",
+    // bottom: 0,
   },
   name: {
     color: "white",
@@ -171,11 +181,6 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     borderRadius: 100,
     width: 170,
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: "bold",
-    textAlign: "center",
   },
 });
 
