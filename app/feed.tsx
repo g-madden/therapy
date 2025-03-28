@@ -13,23 +13,52 @@ import {
 import { Practitioner } from "./types";
 import { profiles } from "./data/profiles";
 import { useApp } from "./context/AppContext";
+import { PanGestureHandler } from "react-native-gesture-handler";
 
-const { height } = Dimensions.get("window");
+const { height, width } = Dimensions.get("window");
 
-const Feed = () => {
+interface FeedProps {
+  onNavigateToProfiles: () => void;
+  slideAnim: Animated.Value;
+}
+
+const Feed: React.FC<FeedProps> = ({ onNavigateToProfiles, slideAnim }) => {
   const { saveProfile, dismissProfile, feedIndex, setFeedIndex, savedProfiles } = useApp();
   const [data, setData] = useState<Practitioner[]>(profiles);
   const [showSuccess, setShowSuccess] = useState(false);
   const fadeAnim = React.useRef(new Animated.Value(0)).current;
   const flatListRef = React.useRef<FlatList>(null);
 
-  // Only filter saved profiles when component mounts
+  const handleGestureEvent = Animated.event(
+    [{ nativeEvent: { translationX: slideAnim } }],
+    { useNativeDriver: true }
+  );
+
+  const handleGestureEnd = (event: any) => {
+    if (event.nativeEvent.translationX < -50) {
+      Animated.timing(slideAnim, {
+        toValue: -width,
+        duration: 300,
+        useNativeDriver: true,
+      }).start(() => {
+        onNavigateToProfiles();
+        slideAnim.setValue(0);
+      });
+    } else {
+      Animated.spring(slideAnim, {
+        toValue: 0,
+        useNativeDriver: true,
+      }).start();
+    }
+  };
+
+  // Filter profiles whenever savedProfiles changes
   useEffect(() => {
     const filteredProfiles = profiles.filter(
       profile => !savedProfiles.some(saved => saved.id === profile.id)
     );
     setData(filteredProfiles);
-  }, []); // Empty dependency array means this only runs on mount
+  }, [savedProfiles]); // Add savedProfiles as a dependency
 
   // Reset scroll position when returning to feed
   useEffect(() => {
@@ -112,39 +141,46 @@ const Feed = () => {
   );
 
   return (
-    <View style={styles.mainContainer}>
-      <FlatList
-        ref={flatListRef}
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        pagingEnabled
-        showsVerticalScrollIndicator={false}
-        snapToAlignment="start"
-        decelerationRate="fast"
-        style={styles.list}
-        onMomentumScrollEnd={handleScrollEnd}
-        getItemLayout={getItemLayout}
-      />
-      {showSuccess && (
-        <Animated.View 
-          style={[
-            styles.successToast,
-            {
-              opacity: fadeAnim,
-              transform: [{
-                translateY: fadeAnim.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [20, 0]
-                })
-              }]
-            }
-          ]}
-        >
-          <Text style={styles.successText}>Added to your list!</Text>
-        </Animated.View>
-      )}
-    </View>
+    <PanGestureHandler
+      onGestureEvent={handleGestureEvent}
+      onEnded={handleGestureEnd}
+      activeOffsetX={[-20, 20]}
+      simultaneousHandlers={flatListRef}
+    >
+      <View style={styles.mainContainer}>
+        <FlatList
+          ref={flatListRef}
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+          pagingEnabled
+          showsVerticalScrollIndicator={false}
+          snapToAlignment="start"
+          decelerationRate="fast"
+          style={styles.list}
+          onMomentumScrollEnd={handleScrollEnd}
+          getItemLayout={getItemLayout}
+        />
+        {showSuccess && (
+          <Animated.View 
+            style={[
+              styles.successToast,
+              {
+                opacity: fadeAnim,
+                transform: [{
+                  translateY: fadeAnim.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [20, 0]
+                  })
+                }]
+              }
+            ]}
+          >
+            <Text style={styles.successText}>Added to your list!</Text>
+          </Animated.View>
+        )}
+      </View>
+    </PanGestureHandler>
   );
 };
 
