@@ -108,10 +108,9 @@ const SavedProfilesList: React.FC<SavedProfilesListProps> = ({
           onPress={onSettingsPress}
           style={styles.settingsButton}
         >
-          <Ionicons name="settings-outline" size={24} color="black" />
+          <Ionicons name="settings-outline" size={24} color="white" />
         </TouchableOpacity>
       </View>
-      <Text style={styles.title}>Saved Profiles</Text>
       <FlatList
         data={savedProfiles}
         keyExtractor={(item) => item.id}
@@ -128,8 +127,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    padding: 20,
-    paddingTop: 75,
+    // padding: 20,
   },
   fullScreen: {
     flex: 1,
@@ -137,17 +135,19 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: "row",
-    justifyContent: "flex-end",
-    marginBottom: 20,
+    // justifyContent: "flex-end",
+    // marginBottom: 20,
+    backgroundColor: "#383838",
+    width: "100%",
+    // height: 50,
+    paddingTop: 150,
   },
   settingsButton: {
     padding: 8,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "black",
-    marginBottom: 20,
+    zIndex: 30,
+    position: "absolute",
+    right: 20,
+    top: 75,
   },
   emptyText: {
     color: "rgba(0, 0, 0, 0.5)",
