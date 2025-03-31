@@ -1,0 +1,1086 @@
+{
+    "id": 177574,
+    "profileTypeId": 6,
+    "partnerId": 1,
+    "acceptingEmails": true,
+    "endorsementsCount": 1,
+    "isVerified": true,
+    "verificationStatus": "VERIFIED",
+    "status": "ENABLED",
+    "useCompanyName": false,
+    "onlineTherapy": true,
+    "free_consultation": true,
+    "uuid": "886d36bb-815d-11e8-a6ad-06142c356176",
+    "title": "Ms.",
+    "firstName": "Mercedes",
+    "middleName": "",
+    "listingName": "Mercedes Baines",
+    "contactName": "Mercedes Baines",
+    "pronouns": "",
+    "lastName": "Baines",
+    "accepting_appointments": "YES",
+    "hasProtectedNumber": true,
+    "hasWebsite": true,
+    "phoneNumber": "+16042395646",
+    "formattedPhoneNumber": "(604) 239-5646",
+    "phoneUrl": "tel:+1-604-239-5646",
+    "photoUrls": {
+        "thumbnail": "https://photos.psychologytoday.com/3d116ed1-46cd-11ea-a6ad-06142c356176/2/320x400.jpeg",
+        "width": 320,
+        "height": 400,
+        "type": "image/jpeg"
+    },
+    "primaryLocation": {
+        "uuid": "b55063f2-ad2a-11e8-a6ad-06142c356176",
+        "phoneNumber": "+16042395646",
+        "formattedPhoneNumber": "(604) 239-5646",
+        "phoneUrl": "tel:+1-604-239-5646",
+        "locationName": "Mind In Body Integrated Counselling Services",
+        "cityName": "Vancouver",
+        "cityUrlPath": "[PROFILE_CLASS]/bc/vancouver",
+        "regionName": "British Columbia",
+        "regionCode": "BC",
+        "postalCode": "V6J",
+        "countryCode": "CA"
+    },
+    "secondaryLocation": null,
+    "boardCertification": null,
+    "education": {
+        "uuid": "672aa57a-45c7-4be7-b04e-71305b200436",
+        "institution": "Adler University",
+        "yearEducationCompleted": 2013,
+        "yearPracticeStarted": 2013,
+        "yearsInPractice": 12,
+        "diplomaDegree": ""
+    },
+    "fees": {
+        "initial_session_cost": 0,
+        "individual_session_cost": 160,
+        "couples_session_cost": 180,
+        "sliding_scale": false
+    },
+    "suffixes": [
+        {
+            "hasDefinition": true,
+            "isWriteIn": false,
+            "label": "HealthRoles.COUNSELOR",
+            "type": "profile-type",
+            "uuid": null,
+            "id": 1302
+        },
+        {
+            "hasDefinition": true,
+            "isWriteIn": false,
+            "label": "MA",
+            "type": "academic",
+            "uuid": null,
+            "id": 1489
+        },
+        {
+            "hasDefinition": true,
+            "isWriteIn": false,
+            "label": "RCC",
+            "type": "academic",
+            "uuid": null,
+            "id": 1522
+        },
+        {
+            "hasDefinition": true,
+            "isWriteIn": false,
+            "label": "CCC",
+            "type": "academic",
+            "uuid": null,
+            "id": 1421
+        },
+        {
+            "hasDefinition": true,
+            "isWriteIn": false,
+            "label": "CAC",
+            "type": "academic",
+            "uuid": null,
+            "id": 1413
+        }
+    ],
+    "credentials": [
+        {
+            "isPrimary": false,
+            "hasAccreditation": false,
+            "uuid": "1fea8a75-5f55-422e-adbf-1652948c9f49",
+            "type": "certificate",
+            "issued": "2009-01-01",
+            "expiration": "",
+            "organization": "Vancouver Community College",
+            "organizationAbbreviation": "",
+            "organizationIdentifier": "Counselling Diploma",
+            "accreditation": "",
+            "accreditationAbbreviation": "",
+            "accreditationTitle": "",
+            "accreditationDefinition": "",
+            "supervisorName": "",
+            "supervisorOrganization": "",
+            "supervisorIdentifier": "",
+            "supervisorExpiration": "",
+            "verificationStatus": "NO_DATA",
+            "credentialName": ""
+        },
+        {
+            "isPrimary": false,
+            "hasAccreditation": false,
+            "uuid": "a9a92da9-59aa-4bb6-958a-00fbe714d1b7",
+            "type": "certificate",
+            "issued": "2013-01-01",
+            "expiration": "",
+            "organization": "Adler University",
+            "organizationAbbreviation": "",
+            "organizationIdentifier": "Master's Degree",
+            "accreditation": "",
+            "accreditationAbbreviation": "",
+            "accreditationTitle": "",
+            "accreditationDefinition": "",
+            "supervisorName": "",
+            "supervisorOrganization": "",
+            "supervisorIdentifier": "",
+            "supervisorExpiration": "",
+            "verificationStatus": "NO_DATA",
+            "credentialName": ""
+        },
+        {
+            "isPrimary": true,
+            "hasAccreditation": false,
+            "uuid": "ac4dc650-1c6b-4cba-98ad-4f2d3addee31",
+            "type": "license",
+            "issued": "",
+            "expiration": "2025-04-01",
+            "organization": "British Columbia",
+            "organizationAbbreviation": "BC",
+            "organizationIdentifier": "10801",
+            "accreditation": "",
+            "accreditationAbbreviation": "",
+            "accreditationTitle": "",
+            "accreditationDefinition": "",
+            "supervisorName": "",
+            "supervisorOrganization": "",
+            "supervisorIdentifier": "",
+            "supervisorExpiration": "",
+            "verificationStatus": "VERIFIED_WITH_CHECKMARK",
+            "credentialName": "Mercedes Baines"
+        }
+    ],
+    "gallery": [
+        {
+            "caption": "",
+            "url": "https://photos.psychologytoday.com/40a98632-46cd-11ea-a6ad-06142c356176/1/large.jpeg",
+            "url_small": "https://photos.psychologytoday.com/40a98632-46cd-11ea-a6ad-06142c356176/1/small.jpeg",
+            "url_medium": "https://photos.psychologytoday.com/40a98632-46cd-11ea-a6ad-06142c356176/1/medium.jpeg"
+        }
+    ],
+    "personalStatements": [
+        {
+            "languageCode": "en",
+            "headline1": "",
+            "headline2": "",
+            "headline3": "",
+            "paragraph1": "Inspiring fully embodied living, I encourage connection, self-awareness, insight, growth, & transformation with individuals, couples & groups.  Recognizing the interconnection between the mind & body, I take a holistic approach to counselling therapy. I view each person as a unique whole being (body, mind & spirit) influencing & influenced by our social contexts such as family, friends, work, environment, & culture. In my work, I weave collaborative conversation with creativity, tailoring my approach to the specific needs & situations of each person. With 20 years' experience as a group facilitator, I also offer therapeutic, psycho-educational & professional development workshops for individuals, couples, businesses & organizations.",
+            "paragraph2": "I am passionate about the unique meaning you make of the world & your circumstances & your ability to make positive changes in order to live a more fully embodied life. I believe that when you pursue fully embodied living you feel a greater sense of belonging, empowerment & purpose in your life.",
+            "paragraph3": ""
+        }
+    ],
+    "quotes": [
+        {
+            "type": "emergency",
+            "languages": [
+                {
+                    "languageCode": "en",
+                    "quote": "In response to the Covid 19 Crisis, I have temporarily shifted my  counselling services to a video platform."
+                }
+            ]
+        },
+        {
+            "type": "availability",
+            "languages": [
+                {
+                    "languageCode": "en",
+                    "quote": "In response to the Covid 19 Crisis, I have shifted my  counselling services to a video platform."
+                }
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "id": 1413,
+            "category_id": 9,
+            "rank": 4,
+            "title": "CAC",
+            "category_name": "academic-suffixes",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "CAC"
+        },
+        {
+            "id": 1421,
+            "category_id": 9,
+            "rank": 3,
+            "title": "CCC",
+            "category_name": "academic-suffixes",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "CCC"
+        },
+        {
+            "id": 1489,
+            "category_id": 9,
+            "rank": 1,
+            "title": "MA",
+            "category_name": "academic-suffixes",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "MA"
+        },
+        {
+            "id": 1522,
+            "category_id": 9,
+            "rank": 2,
+            "title": "RCC",
+            "category_name": "academic-suffixes",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "RCC"
+        },
+        {
+            "id": 4,
+            "category_id": 10,
+            "rank": null,
+            "title": "Addiction",
+            "category_name": "issues",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Addiction"
+        },
+        {
+            "id": 166,
+            "category_id": 10,
+            "rank": null,
+            "title": "Anger Management",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Anger Management"
+        },
+        {
+            "id": 3,
+            "category_id": 10,
+            "rank": 2,
+            "title": "Anxiety",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Anxiety"
+        },
+        {
+            "id": 25,
+            "category_id": 10,
+            "rank": null,
+            "title": "Body Image",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": true,
+            "name": "Other"
+        },
+        {
+            "id": 267,
+            "category_id": 10,
+            "rank": null,
+            "title": "Cancer",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Cancer"
+        },
+        {
+            "id": 503,
+            "category_id": 10,
+            "rank": null,
+            "title": "Codependency",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Codependency"
+        },
+        {
+            "id": 249,
+            "category_id": 10,
+            "rank": null,
+            "title": "Coping Skills",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Coping Skills"
+        },
+        {
+            "id": 2,
+            "category_id": 10,
+            "rank": null,
+            "title": "Depression",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Depression"
+        },
+        {
+            "id": 26,
+            "category_id": 10,
+            "rank": null,
+            "title": "Divorce",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Divorce"
+        },
+        {
+            "id": 9,
+            "category_id": 10,
+            "rank": null,
+            "title": "Eating Disorders",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Eating Disorders"
+        },
+        {
+            "id": 200,
+            "category_id": 10,
+            "rank": null,
+            "title": "Family Conflict",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Family Conflict"
+        },
+        {
+            "id": 14,
+            "category_id": 10,
+            "rank": null,
+            "title": "Grief",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Grief"
+        },
+        {
+            "id": 551,
+            "category_id": 10,
+            "rank": null,
+            "title": "Infidelity",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Infidelity"
+        },
+        {
+            "id": 13,
+            "category_id": 10,
+            "rank": null,
+            "title": "Life Coaching",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Life Coaching"
+        },
+        {
+            "id": 634,
+            "category_id": 10,
+            "rank": null,
+            "title": "Life Transitions",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Life Transitions"
+        },
+        {
+            "id": 576,
+            "category_id": 10,
+            "rank": null,
+            "title": "Men's Issues",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Men's Issues"
+        },
+        {
+            "id": 255,
+            "category_id": 10,
+            "rank": null,
+            "title": "Obesity",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Obesity"
+        },
+        {
+            "id": 228,
+            "category_id": 10,
+            "rank": null,
+            "title": "Peer Relationships",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Peer Relationships"
+        },
+        {
+            "id": 584,
+            "category_id": 10,
+            "rank": null,
+            "title": "Racial Identity",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Racial Identity"
+        },
+        {
+            "id": 1,
+            "category_id": 10,
+            "rank": 3,
+            "title": "Relationship Issues",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Relationship Issues"
+        },
+        {
+            "id": 260,
+            "category_id": 10,
+            "rank": null,
+            "title": "Self Esteem",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Self Esteem"
+        },
+        {
+            "id": 283,
+            "category_id": 10,
+            "rank": null,
+            "title": "Self-Harming",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Self-Harming"
+        },
+        {
+            "id": 18,
+            "category_id": 10,
+            "rank": null,
+            "title": "Spirituality",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Spirituality"
+        },
+        {
+            "id": 632,
+            "category_id": 10,
+            "rank": null,
+            "title": "Stress",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Stress"
+        },
+        {
+            "id": 182,
+            "category_id": 10,
+            "rank": null,
+            "title": "Substance Use",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Substance Use"
+        },
+        {
+            "id": 205,
+            "category_id": 10,
+            "rank": null,
+            "title": "Suicidal Ideation",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Suicidal Ideation"
+        },
+        {
+            "id": 19,
+            "category_id": 10,
+            "rank": 1,
+            "title": "Trauma and PTSD",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Trauma and PTSD"
+        },
+        {
+            "id": 575,
+            "category_id": 10,
+            "rank": null,
+            "title": "Women's Issues",
+            "category_name": "issues",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Women's Issues"
+        },
+        {
+            "id": 185,
+            "category_id": 11,
+            "rank": null,
+            "title": "Bisexual",
+            "category_name": "sexuality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Bisexual"
+        },
+        {
+            "id": 186,
+            "category_id": 11,
+            "rank": null,
+            "title": "Lesbian",
+            "category_name": "sexuality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Lesbian"
+        },
+        {
+            "id": 172,
+            "category_id": 11,
+            "rank": null,
+            "title": "LGBTQ+",
+            "category_name": "sexuality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Gay"
+        },
+        {
+            "id": 201,
+            "category_id": 12,
+            "rank": null,
+            "title": "Mood Disorders",
+            "category_name": "mental-health",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Mood Disorders"
+        },
+        {
+            "id": 326,
+            "category_id": 13,
+            "rank": null,
+            "title": "Teen",
+            "category_name": "age-focus",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Teen"
+        },
+        {
+            "id": 327,
+            "category_id": 13,
+            "rank": null,
+            "title": "Adults",
+            "category_name": "age-focus",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Adults"
+        },
+        {
+            "id": 328,
+            "category_id": 13,
+            "rank": null,
+            "title": "Elders (65+)",
+            "category_name": "age-focus",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Elders (65+)"
+        },
+        {
+            "id": 334,
+            "category_id": 14,
+            "rank": null,
+            "title": "Black",
+            "category_name": "ethnicity-focus",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "African American"
+        },
+        {
+            "id": 339,
+            "category_id": 14,
+            "rank": null,
+            "title": "Other Racial or Ethnic Background",
+            "category_name": "ethnicity-focus",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Other Racial or Ethnic Background"
+        },
+        {
+            "id": 271,
+            "category_id": 17,
+            "rank": null,
+            "title": "Bisexual Allied",
+            "category_name": "categories",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Bisexual Allied"
+        },
+        {
+            "id": 268,
+            "category_id": 17,
+            "rank": null,
+            "title": "Gay Allied",
+            "category_name": "categories",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Gay Allied"
+        },
+        {
+            "id": 266,
+            "category_id": 17,
+            "rank": null,
+            "title": "HIV / AIDS Allied",
+            "category_name": "categories",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "HIV / AIDS Allied"
+        },
+        {
+            "id": 269,
+            "category_id": 17,
+            "rank": null,
+            "title": "Lesbian Allied",
+            "category_name": "categories",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Lesbian Allied"
+        },
+        {
+            "id": 270,
+            "category_id": 17,
+            "rank": null,
+            "title": "Transgender Allied",
+            "category_name": "categories",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Transgender Allied"
+        },
+        {
+            "id": 620,
+            "category_id": 21,
+            "rank": null,
+            "title": "Adlerian",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Adlerian"
+        },
+        {
+            "id": 324,
+            "category_id": 21,
+            "rank": null,
+            "title": "Adlerian Therapy",
+            "category_name": "treatment-orientation",
+            "hasDefinition": false,
+            "IsWriteIn": true,
+            "name": "Other"
+        },
+        {
+            "id": 496,
+            "category_id": 21,
+            "rank": null,
+            "title": "Attachment-based",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Attachment-based"
+        },
+        {
+            "id": 293,
+            "category_id": 21,
+            "rank": null,
+            "title": "Cognitive Behavioural (CBT)",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Cognitive Behavioral (CBT)"
+        },
+        {
+            "id": 582,
+            "category_id": 21,
+            "rank": null,
+            "title": "Culturally Sensitive",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Culturally Sensitive"
+        },
+        {
+            "id": 310,
+            "category_id": 21,
+            "rank": null,
+            "title": "Existential",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Existential"
+        },
+        {
+            "id": 499,
+            "category_id": 21,
+            "rank": null,
+            "title": "Expressive Arts",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Expressive Arts"
+        },
+        {
+            "id": 311,
+            "category_id": 21,
+            "rank": null,
+            "title": "Family Systems",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Family Systems"
+        },
+        {
+            "id": 588,
+            "category_id": 21,
+            "rank": null,
+            "title": "Feminist",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Feminist"
+        },
+        {
+            "id": 297,
+            "category_id": 21,
+            "rank": null,
+            "title": "Humanistic",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Humanistic"
+        },
+        {
+            "id": 498,
+            "category_id": 21,
+            "rank": null,
+            "title": "Integrative",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Integrative"
+        },
+        {
+            "id": 306,
+            "category_id": 21,
+            "rank": null,
+            "title": "Interpersonal",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Interpersonal"
+        },
+        {
+            "id": 307,
+            "category_id": 21,
+            "rank": null,
+            "title": "Mindfulness-Based (MBCT)",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Mindfulness-based (MBCT)"
+        },
+        {
+            "id": 492,
+            "category_id": 21,
+            "rank": null,
+            "title": "Motivational Interviewing",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Motivational Interviewing"
+        },
+        {
+            "id": 586,
+            "category_id": 21,
+            "rank": null,
+            "title": "Multicultural",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Multicultural"
+        },
+        {
+            "id": 490,
+            "category_id": 21,
+            "rank": null,
+            "title": "Narrative",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Narrative"
+        },
+        {
+            "id": 628,
+            "category_id": 21,
+            "rank": null,
+            "title": "Person-Centered",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Person-Centered"
+        },
+        {
+            "id": 299,
+            "category_id": 21,
+            "rank": null,
+            "title": "Psychodynamic",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Psychodynamic"
+        },
+        {
+            "id": 304,
+            "category_id": 21,
+            "rank": null,
+            "title": "Solution Focused Brief (SFBT)",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Solution Focused Brief (SFBT)"
+        },
+        {
+            "id": 494,
+            "category_id": 21,
+            "rank": null,
+            "title": "Somatic",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Somatic"
+        },
+        {
+            "id": 630,
+            "category_id": 21,
+            "rank": null,
+            "title": "Strength-Based",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Strength Based"
+        },
+        {
+            "id": 495,
+            "category_id": 21,
+            "rank": null,
+            "title": "Trauma Focused",
+            "category_name": "treatment-orientation",
+            "hasDefinition": true,
+            "IsWriteIn": false,
+            "name": "Trauma Focused"
+        },
+        {
+            "id": 286,
+            "category_id": 22,
+            "rank": null,
+            "title": "Individuals",
+            "category_name": "modality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Individuals"
+        },
+        {
+            "id": 287,
+            "category_id": 22,
+            "rank": null,
+            "title": "Couples",
+            "category_name": "modality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Couples"
+        },
+        {
+            "id": 289,
+            "category_id": 22,
+            "rank": null,
+            "title": "Group",
+            "category_name": "modality",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Group"
+        },
+        {
+            "id": 595,
+            "category_id": 23,
+            "rank": null,
+            "title": "Online",
+            "category_name": "online-therapy",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Online Counseling"
+        },
+        {
+            "id": 486,
+            "category_id": 26,
+            "rank": null,
+            "title": "Cash",
+            "category_name": "payment-method",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Cash"
+        },
+        {
+            "id": 483,
+            "category_id": 26,
+            "rank": null,
+            "title": "Cheque",
+            "category_name": "payment-method",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Check"
+        },
+        {
+            "id": 479,
+            "category_id": 26,
+            "rank": null,
+            "title": "Mastercard",
+            "category_name": "payment-method",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Mastercard"
+        },
+        {
+            "id": 478,
+            "category_id": 26,
+            "rank": null,
+            "title": "Visa",
+            "category_name": "payment-method",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Visa"
+        },
+        {
+            "id": 1001,
+            "category_id": 27,
+            "rank": null,
+            "title": "Female",
+            "category_name": "gender",
+            "hasDefinition": false,
+            "IsWriteIn": false,
+            "name": "Female"
+        }
+    ],
+    "groups": null,
+    "endorsements": [
+        {
+            "fromProfileUuid": "8d4f1863-815d-11e8-a6ad-06142c356176",
+            "fromFullName": "Maedean Yvonne Myers",
+            "title": "",
+            "healthRole": "COUNSELOR",
+            "healthRoleWriteIn": "",
+            "message": "",
+            "profilePath": "/ca/therapists/maedean-yvonne-myers-vancouver-bc/302697",
+            "suffixes": [
+                {
+                    "hasDefinition": true,
+                    "isWriteIn": false,
+                    "label": "HealthRoles.COUNSELOR",
+                    "type": "profile-type",
+                    "uuid": null,
+                    "id": 1302
+                },
+                {
+                    "hasDefinition": true,
+                    "isWriteIn": false,
+                    "label": "RCC",
+                    "type": "academic",
+                    "uuid": null,
+                    "id": 1522
+                },
+                {
+                    "hasDefinition": true,
+                    "isWriteIn": false,
+                    "label": "CCC",
+                    "type": "academic",
+                    "uuid": null,
+                    "id": 1421
+                },
+                {
+                    "hasDefinition": true,
+                    "isWriteIn": false,
+                    "label": "RYT",
+                    "type": "academic",
+                    "uuid": null,
+                    "id": 1529
+                }
+            ],
+            "profilePhotos": {
+                "120x150": "https://photos.psychologytoday.com/479cbc3c-d11e-4fef-943f-c72b8598f982/1/120x150.jpeg?noindex",
+                "320x400": "https://photos.psychologytoday.com/479cbc3c-d11e-4fef-943f-c72b8598f982/1/320x400.jpeg?noindex",
+                "80x100": "https://photos.psychologytoday.com/479cbc3c-d11e-4fef-943f-c72b8598f982/1/80x100.jpeg?noindex",
+                "edited": "https://photos.psychologytoday.com/479cbc3c-d11e-4fef-943f-c72b8598f982/1/edited.jpeg?noindex",
+                "original": "https://photos.psychologytoday.com/479cbc3c-d11e-4fef-943f-c72b8598f982/1/original.jpeg?noindex"
+            },
+            "created": "2016-09-07T20:59:58Z",
+            "status": "ENABLED"
+        }
+    ],
+    "healthRole": "COUNSELOR",
+    "healthRoleWriteIn": "",
+    "lastUpdated": "2024-12-18T17:47:44-08:00",
+    "introVideo": null,
+    "nearbyAreas": {
+        "cities": [
+            {
+                "url": "[PROFILE_CLASS]/bc/vancouver",
+                "name": "Vancouver",
+                "parentRegion": "British Columbia",
+                "parentRegionCode": "BC"
+            }
+        ],
+        "postalCodes": [
+            {
+                "url": "ca/[PROFILE_CLASS]/v6j",
+                "name": "V6J",
+                "parentRegion": "British Columbia",
+                "parentRegionCode": ""
+            },
+            {
+                "url": "ca/[PROFILE_CLASS]/v5z",
+                "name": "V5Z",
+                "parentRegion": "British Columbia",
+                "parentRegionCode": ""
+            }
+        ],
+        "neighborhoods": [
+            {
+                "url": "ca/[PROFILE_CLASS]/bc/vancouver/kitsilano",
+                "name": "Kitsilano",
+                "parentRegion": "",
+                "parentRegionCode": ""
+            },
+            {
+                "url": "ca/[PROFILE_CLASS]/bc/vancouver/south-cambie",
+                "name": "South Cambie",
+                "parentRegion": "",
+                "parentRegionCode": ""
+            }
+        ]
+    },
+    "appointments": {
+        "online": "YES",
+        "inPerson": "NO"
+    },
+    "appointmentTypes": {
+        "online": true,
+        "inPerson": false
+    },
+    "thirdPartyName": ""
+}
